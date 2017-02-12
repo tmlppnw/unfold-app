@@ -1,23 +1,88 @@
+<!--REFERENCE: https://github.com/driftyco/ionic-preview-app/blob/master/src/pages/inputs/basic/template.html-->
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page Two</ion-title>
+    <ion-title>Create A New Game!</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <!--<ion-list>-->
+  <form (submit)="processForm()" [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary" stacked>What is the name of your game?</ion-label>
+        <ion-input
+          formControlName="gameName"
+          type="text"
+          placeholder="Game Name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Area of Life</ion-label>
+        <ion-input
+          formControlName="areaOfLife"
+          type="text"
+          placeholder="ex. Finance/ Career/ Romance/..."></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>What is your possibility?</ion-label>
+        <ion-input
+          formControlName="possibility"
+          type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>What is the outcome?</ion-label>
+        <ion-input
+          formControlName="outcome"
+          type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>What is your final result?</ion-label>
+        <ion-input
+          formControlName="finalResult"
+          type="text">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>By when will you achieve this result?</ion-label>
+        <ion-input
+          formControlName="byWhen"
+          type="text"
+          placeholder="TODO: Link in calendar"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>How many milestones are in your game?</ion-label>
+        <ion-input
+          formControlName="mileStonesAmount"
+          type="number"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit">Create Game</button>
+    </div>
+  </form>
+
+  <!--    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+            <ion-icon [name]="item.icon" item-left></ion-icon>
+            {{item.title}}
+            <div class="item-note" item-right>
+              {{item.note}}
+            </div>
+          </button>
+        </ion-list>
+        <div *ngIf="selectedItem" padding>
+          You navigated here from <b>{{selectedItem.title}}</b>
+        </div>-->
 </ion-content>

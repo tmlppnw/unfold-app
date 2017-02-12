@@ -7,9 +7,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
+<ion-content padding class="action-sheets-basic-page">
+
   <ion-list class="game-list">
+    <ion-item>
+      <ion-avatar item-left>
+        <ion-icon name="heart"></ion-icon>
+      </ion-avatar>
+      <span class="complete-date">1/5/2017</span>
+      <h2>Happy Sunday!</h2>
+      <h3>Love, Connection, Happiness</h3>
+      <p>Having a loving relationship</p>
+    </ion-item>
     <ion-item>
       <ion-avatar item-left>
         <ion-icon name="heart"></ion-icon>
@@ -49,4 +58,9 @@
   </ion-list>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+
+  <!--REFERENCE: https://github.com/driftyco/ionic-preview-app/blob/master/src/pages/action-sheets/basic/basic.html-->
+  <button ion-button block (click)="openMenu()">
+    Options
+  </button>
 </ion-content>
