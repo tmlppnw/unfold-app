@@ -4,7 +4,12 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
+import { Page3 } from '../pages/page3/page3';
 
+// Note: These questions are only in the sidebar for now...
+// TODO: Remove these questions once advance button works.
+import { QGameName } from '../pages/QGameName/QGameName';
+import { QGamePossibility } from '../pages/QGamePossibility/QGamePossibility';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +27,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Game List', component: Page1 },
-      { title: 'Create A New Game!', component: Page2 }
+      { title: 'Create A New Game!', component: Page2 },
+      { title: 'Test Page', component: Page3},
+      { title: '(Hidden)Q Game Name', component: QGameName},
+      { title: '(Hidden)Q Game Possibility', component: QGamePossibility}
     ];
 
   }
