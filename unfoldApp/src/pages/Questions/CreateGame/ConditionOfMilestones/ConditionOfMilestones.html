@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Create Game: Step 8</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--<div ion-item *ngFor="let item of numberOfMilestones">-->
+    <ion-item>
+      <h2>Condition of satification for milestone ___:</h2>
+    </ion-item>
+    <form (submit)="processForm()" [formGroup]="form">
+      <ion-item>
+        <ion-input
+          formControlName="conditionOfMilestones"
+          type="text">
+        </ion-input>
+      </ion-item>
+      <div padding>
+        <button ion-button type="submit">Create Game!</button>
+      </div>
+    </form>
+  <!--</div>-->
+</ion-content>

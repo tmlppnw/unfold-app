@@ -8,8 +8,7 @@ import { Page3 } from '../pages/page3/page3';
 
 // Note: These questions are only in the sidebar for now...
 // TODO: Remove these questions once advance button works.
-import { QGameName } from '../pages/QGameName/QGameName';
-import { QGamePossibility } from '../pages/QGamePossibility/QGamePossibility';
+import { LifeArea } from '../pages/Questions/CreateGame/LifeArea/LifeArea';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,8 +28,7 @@ export class MyApp {
       { title: 'Game List', component: Page1 },
       { title: 'Create A New Game!', component: Page2 },
       { title: 'Test Page', component: Page3},
-      { title: '(Hidden)Q Game Name', component: QGameName},
-      { title: '(Hidden)Q Game Possibility', component: QGamePossibility}
+      { title: 'Create A New Game (Steps)', component: LifeArea }
     ];
 
   }

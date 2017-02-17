@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Create Game: Step 5</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <h2>What is your final result?</h2>
+  </ion-item>
+  <form (submit)="processForm()" [formGroup]="form">
+    <ion-item>
+      <ion-input
+        formControlName="finalResult"
+        type="text">
+      </ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button type="submit">Next</button>
+    </div>
+  </form>
+</ion-content>

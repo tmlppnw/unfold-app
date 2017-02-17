@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Create Game: Step 1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <h2>Area of Life</h2>
+  </ion-item>
+  <form (submit)="processForm()" [formGroup]="form">
+    <ion-item>
+      <!--TODO: THIS SHOULD BE AN ENUM-->
+      <ion-input
+        formControlName="gameLifeArea"
+        type="text">
+      </ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button type="submit">Next</button>
+    </div>
+  </form>
+</ion-content>

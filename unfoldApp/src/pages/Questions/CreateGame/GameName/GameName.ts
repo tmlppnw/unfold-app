@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { QGamePossibility } from '../QGamePossibility/QGamePossibility'
+import { GamePossibility } from '../GamePossibility/GamePossibility'
 
 @Component({
-  templateUrl: 'QGameName.html'
+  templateUrl: 'GameName.html'
 })
-export class QGameName {
+export class GameName {
   form;
 
   constructor(
@@ -22,8 +22,7 @@ export class QGameName {
   }
 
   transition() {
-    console.log(this.navCtrl);
-    this.navCtrl.push(QGamePossibility, {gameName: this.form.gameName});
+    this.navCtrl.push(GamePossibility, {gameName: this.form.gameName});
   }
 
   processForm() {
@@ -37,7 +36,6 @@ export class QGameName {
     if (this.form.status === 'VALID') {
       // alert.present();
       this.transition();
-
     };
   }
 
