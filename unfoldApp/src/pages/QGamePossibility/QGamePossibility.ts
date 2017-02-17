@@ -4,6 +4,7 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
+  selector: 'QGamePossibility',
   templateUrl: 'QGamePossibility.html'
 })
 export class QGamePossibility {

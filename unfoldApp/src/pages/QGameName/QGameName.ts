@@ -22,7 +22,8 @@ export class QGameName {
   }
 
   transition() {
-    this.navCtrl.push(QGamePossibility);
+    console.log(this.navCtrl);
+    this.navCtrl.push(QGamePossibility, {gameName: this.form.gameName});
   }
 
   processForm() {
